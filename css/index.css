@@ -57,6 +57,7 @@ body.dark {
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
+  gap: 35px;
 }
 
 #header-txt {
@@ -168,4 +169,10 @@ body.dark {
   #cal {
     width: 80%;
   }
+}
+footer{
+  background-color: transparent;
+  text-align: center;
+  color:var(--text-field-op);
+  font-size: .9rem;
 }
