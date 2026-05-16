@@ -25,6 +25,9 @@
   --text-equals:    #ffffff;
 
   --shadow:         5px 5px 15px rgba(0, 0, 0, 0.3);
+
+  --footer-color:    #000000;
+  --footer-a:        blue;
 }
 
 /* ── DARK THEME ── */
@@ -46,6 +49,9 @@ body.dark {
   --text-equals:    #ffffff;
 
   --shadow:         5px 5px 15px rgba(0, 0, 0, 0.6);
+
+  --footer-color:   #ffffff;
+  --footer-a:       #e5e53c;
 }
 
 /* ── BASE STYLES ── */
@@ -57,7 +63,7 @@ body.dark {
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
-  gap: 35px;
+  gap: 50px;
 }
 
 #header-txt {
@@ -170,9 +176,10 @@ body.dark {
     width: 80%;
   }
 }
+
 footer{
-  background-color: transparent;
-  text-align: center;
-  color:var(--text-field-op);
-  font-size: .9rem;
+  color: var(--footer-color);
+}
+footer>p>a{
+  color: var(--footer-a);
 }

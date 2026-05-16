@@ -75,6 +75,24 @@ function myRes() {
     if (!bag) return;
     const last = bag[bag.length - 1];
     if (["+", "-", "*", "/"].includes(last)) return;
-    document.querySelector("#input-field").innerText = eval(bag);
+    document.querySelector("#input-field").innerText = parseFloat(Number(eval(bag)).toPrecision(10));
     bag=""+eval(bag)
 }
+document.addEventListener("keydown", function(e) {
+  if ("0123456789".includes(e.key)) {
+    bag += e.key;
+    document.querySelector("#input-field").innerText = bag;
+  } 
+  else if (["+", "-", "*", "/"].includes(e.key)) {
+    const last = bag[bag.length - 1];
+    if (["+", "-", "*", "/"].includes(last)) {
+      bag = bag.slice(0, -1); // replace instead of stack
+    }
+    bag += e.key;
+    document.querySelector("#input-field").innerText = bag;
+  }
+  else if (e.key === ".") myFun({ target: { innerHTML: "." } });
+  else if (e.key === "Enter" || e.key === "=") myRes();
+  else if (e.key === "Backspace") myDel();
+  else if (e.key === "Escape") myReset();
+});
