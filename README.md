@@ -51,8 +51,11 @@ calculite/
 │   └── index.css
 ├── js/
 │   └── index.js
+├── assets/
+│   └── fevicon.svg
 ├── docs/
-│   ├── light-preview.png
+|   ├── desktop-preview.png
+│   ├── mobile-preview.png
 │   └── dark-preview.png
 ├── .gitignore
 ├── LICENSE
